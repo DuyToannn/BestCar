@@ -8,30 +8,17 @@ module.exports = {
                 yellowd3: '#d3d126'
             },
         },
+        minWidth: {
+            '150': '150px',
+
+        },
+        screens: {
+            'sm-max': { 'max': '640px' },
+            'md-max': { 'max': '768px' },
+            'lg-max': { 'max': '1024px' },
+            'xl-max': { 'max': '1280px' },
+            '2xl-max': { 'max': '1536px' },
+        },
     },
-    plugins: [
-        function ({ addComponents }) {
-          addComponents({
-            '.container': {
-              width: '100%',
-            //   marginLeft: 'auto',
-            //   marginRight: 'auto',
-            //   paddingLeft: '2rem',
-            //   paddingRight: '2rem',
-              '@screen sm': {
-                maxWidth: '640px',
-              },
-              '@screen md': {
-                maxWidth: '767px',
-              },
-              '@screen lg': {
-                maxWidth: '1024px',
-              },
-              '@screen xl': {
-                maxWidth: '1280px',
-              },
-            }
-          })
-        }
-      ]
+    plugins: []
 }

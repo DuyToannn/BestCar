@@ -9,50 +9,123 @@
     <link rel="stylesheet" href="./build/tailwind.css">
     <link rel="stylesheet" href="./css/tailwind.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./postcss.config.js"></script>
+    <script src="./tailwind.config.js"></script>
+    <script src="./package-lock.json"></script>
+    <script src="./package.json"></script>
     <title>BestBus</title>
 </head>
 
 <body>
-      <div class="loader-wrapper">
+    <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
-      </div>
+    </div>
     <!--===========Header Start==============-->
-    <div class="header bg-blue00">
+    <div class="header bg-blue-200">
         <div class="container mx-auto">
-            <div class="header__top flex">
+            <div class="header__top flex justify-between items-center h-16 lg-max:hidden">
                 <div class="header__top-left flex">
                     <div class="left-address">
-                        <i class="fas fa-thumbtack"></i>
-                        <span class="text-blues33">Fairview Ave, El Monte, CA 91732 </span>
+                        <i class="fal fa-thumbtack text-yellowd3 font-medium"></i>
+                        <span class="text-white text-opacity-70 m-5">Fairview Ave, El Monte, CA 91732 </span>
                     </div>
-                    <div class="left-emai">
-                        <i class="far fa-envelope"></i>
-                        <span>rental@my-domain.com</span>
-                        <h2 class="text-skin-base">test</h2>
+                    <div class="left-email">
+                        <i class="far fa-envelope text-yellowd3 font-medium"></i>
+                        <span class="text-white text-opacity-70">rental@my-domain.com</span>
                     </div>
                 </div>
                 <div class="header__top-right flex">
-                    <div class="right-login flex">
-                        <div class="login">Login</div>
-                        <div class="register">Register</div>
+                    <div class="right-login inline-flex">
+                        <div class="login text-white text-opacity-70 px-5">Login</div>
+                        <div class="register text-white text-opacity-70 px-5">Register</div>
                     </div>
-                    <div class="right-socials">
-                        <div class="follow-us"></div>
-                        <div class="top-socials">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-pinterest"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-behance"></i></a>
-
+                    <div class="right-socials flex ml-5">
+                        <div class="follow-us text-white text-opacity-70">Follow Us:</div>
+                        <div class="top-socials text-white">
+                            <a href="#"><i class="fab fa-facebook-f pl-3 text-sm"></i></a>
+                            <a href="#"><i class="fab fa-twitter pl-3 text-sm"></i></a>
+                            <a href="#"><i class="fab fa-pinterest pl-3 text-sm"></i></a>
+                            <a href="#"><i class="fab fa-linkedin pl-3 text-sm"></i></a>
+                            <a href="#"><i class="fab fa-instagram pl-3 text-sm"></i></a>
+                            <a href="#"><i class="fab fa-behance pl-3 text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom py-9">
+                <div class="header__bottom-nav flex justify-between items-center">
+                    <div class="nav__img">
+                        <img src="./img/logo2-1.png" alt="" class="img-bestcar">
+                    </div>
+                    <div class="nav__mega lg-max:hidden">
+                        <ul class="nav__mega-menu flex text-white font-medium">
+                            <li class="menu__list px-5"><a href="" class="hover:text-yellowd3 transition">Home</a></li>
+                            <li class="menu__list px-5 relative"><a href="" class="hover:text-yellowd3 transition">Our Fleet<i class="fas fa-caret-down pl-1"></i></a>
+                                <div class="mega-group1 absolute flex top-11">
+                                    <ul>
+                                        <li><a href="" class=" w-full min-w-150 block">Listing Page</a></li>
+                                        <li><a href="" class=" w-full min-w-150 block">Booking Car</a></li>
+                                        <li><a href="" class=" w-full min-w-150 block">Single Form</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu__list px-5"><a href="" class="hover:text-yellowd3 transition">About Us</a></li>
+                            <li class="menu__list px-5 relative"><a href="" class="hover:text-yellowd3 transition">News<i class="fas fa-caret-down pl-1"></i></a>
+                                <div class="mega-group1 absolute flex top-11">
+                                    <ul>
+                                        <li><a href="#" class="hover:text-yellowd3 transition w-full min-w-150 block">News Clasic</a></li>
+                                        <li><a href="#" class="hover:text-yellowd3 transition w-full min-w-150 block">Singe Post</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__contact flex md-max:hidden">
+                        <div class="nav__contact-phone flex items-center pr-12">
+                            <i class="fal fa-phone-square-alt text-4xl pr-3 text-yellowd3"></i>
+                            <div class="phone-text">
+                                <span class="block text-white text-opacity-70">Free Reservation</span>
+                                <a href="" class="text-white">(258) 403 7961</a>
+                            </div>
+                        </div>
+                        <div class="nav__contact-hours flex items-center">
+                            <i class="fal fa-stopwatch text-4xl pr-3 text-yellowd3"></i>
+                            <div class="hours-text">
+                                <span class="block text-white text-opacity-70">The Office Hours</span>
+                                <a href="" class="text-white">Mon-Sat 8am 6pm</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--===========Header End================-->
+
+
+    <!--===========Banner Start================-->
+    <div class="banner flex items-center bg-cover" style="background: url(./img/banner.jpg);">
+        <div class="container mx-auto">
+            <div class="banner__text ">
+                <h1 class="text-white text-6xl font-bold max-w-xl">Easier Way To Make Your Small Moves</h1>
+                <h3 class="text-white text-3xl pt-9">Rent our powerful & automatic transmission<br> delivery vans on lower rates now!</h3>
+                <div class="btn-banner mt-9">
+                    <button class="learn-more py-3 px-5 font-semibold bg-yellowd3 hover:bg-white transition">Learn More</button>
+                    <button class="search-vehicle py-3 px-5 font-semibold text-white border border-white ml-6 hover:bg-white transition hover:text-black">Search Vehicle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search">
+        <div class="container">
+            <form action=""></form>
+        </div>
+    </div>
+
 </body>
 
 <script src="./main/main.js"></script>
+
 </html>
